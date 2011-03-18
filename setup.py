@@ -31,7 +31,7 @@ from setuptools import setup
 
 setup(
     name = "tipfy.ext.httpexceptions",
-    version = "0.1.1",
+    version = "0.1.3",
     description = 'Tipfy extension to catch 500 and 404 pages and show proper message',
     long_description = __doc__,
     zip_safe = False,
