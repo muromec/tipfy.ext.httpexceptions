@@ -9,7 +9,7 @@ class HTTPExceptionMiddleware(object):
   def handle_exception(self, handler):
     logging.exception(handler)
     code = handler.code if hasattr(handler, 'code') else 500
-    return Response(render_template("httpexceptions/templates/%s.html" % \
+    return Response(render_template("tipfy/ext/httpexceptions/templates/%s.html" % \
                                     str(code if code in (404, 500) else 500),
                                     ** {'request': Tipfy.request}),
                     status = code, mimetype = 'text/html')
